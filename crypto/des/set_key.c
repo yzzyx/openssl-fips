@@ -313,6 +313,8 @@ static const DES_LONG des_skb[8][64]={
 
 int DES_set_key(const_DES_cblock *key, DES_key_schedule *schedule)
 	{
+	DUMP(key, 8);
+
 	if (DES_check_key)
 		{
 		return DES_set_key_checked(key, schedule);

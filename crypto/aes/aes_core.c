@@ -1223,6 +1223,8 @@ int AES_set_encrypt_key(const unsigned char *userKey, const int bits,
 	if (bits != 128 && bits != 192 && bits != 256)
 		return -2;
 
+	DUMP(userKey, 32);
+
 	rk = key->rd_key;
 
 	if (bits==128)

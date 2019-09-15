@@ -571,6 +571,10 @@ int FIPS_mode_set(int r);
  */
 void ERR_load_CRYPTO_strings(void);
 
+
+#define DUMP(buf, len) dumpBuffer(__FUNCTION__, buf, len)
+#define DUMPSTR(str) dumpBuffer(__FUNCTION__, buf, strlen(str))
+
 /* Error codes for the CRYPTO functions. */
 
 /* Function codes. */
